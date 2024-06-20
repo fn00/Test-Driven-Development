@@ -41,9 +41,29 @@ namespace Unit_Testing
         {
             using StringWriter sw = new StringWriter();
             Console.SetOut(sw);
-            Program.GetSupplier(16);
+            Program.GetSupplier(0);
             var result = sw.ToString().Trim();
             Assert.That(result == "no supplier found with id 0");
+
+        }
+        [Test]
+        public void Test5()
+
+        {
+            using StringWriter sw = new StringWriter();
+            Console.SetOut(sw);
+            Program.GetProduct(10000);
+            var result = sw.ToString().Trim();
+            Assert.That(result == "no product found with id 10000");
+        }
+        [Test]
+        public void Test6()
+        {
+            using StringWriter sw = new StringWriter();
+            Console.SetOut(sw);
+            Program.GetSupplier(10000);
+            var result = sw.ToString().Trim();
+            Assert.That(result == "no supplier found with id 10000");
         }
     }
 }

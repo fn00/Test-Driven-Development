@@ -63,6 +63,11 @@ namespace Test_Driven_Development
                 {
                     Console.WriteLine(reader.GetString(0));
                 }
+                else 
+                {
+                    Console.WriteLine("no product found with id 0");   
+                }
+
             }
             catch (Exception)
             {
